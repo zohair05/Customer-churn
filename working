@@ -1,0 +1,87 @@
+## 🖥️ Application Interface & Output
+
+When you run:
+
+```bash
+python -m streamlit run app.py
+```
+
+the application will open automatically in your browser (usually at `http://localhost:8501`).
+
+The interface is divided into two main sections:
+
+---
+
+### 🔹 1. Sidebar (User Input Panel)
+
+This section allows users to enter customer details.
+
+* **Title:** Customer Profile
+* **Inputs include:**
+
+  * Sliders for:
+
+    * Tenure (0–72 months)
+    * Monthly Charges
+    * Total Charges (auto-adjusted based on inputs)
+  * Dropdowns for:
+
+    * Contract Type (Month-to-month, One year, Two year)
+    * Internet Service (Fiber optic, DSL, No)
+    * Payment Method
+
+---
+
+### 🔹 2. Main Dashboard (Results Area)
+
+This is where predictions and insights are displayed.
+
+* **Header:** 🔄 Telecom Customer Churn Predictor
+* **Customer Summary:** Table showing the selected input values
+* **Prediction Button:**
+
+  * 🔮 **Predict Churn Risk**
+
+---
+
+### ⚡ 3. Prediction Output
+
+After clicking the **Predict** button, results are displayed in two sections:
+
+#### 📌 Prediction Result (What)
+
+* **High Risk (Churn)**
+
+  * Displayed in a red alert box
+  * Shows probability (e.g., 85.2%)
+
+* **Low Risk (No Churn)**
+
+  * Displayed in a green success box
+  * Shows probability
+
+---
+
+#### 📊 SHAP Explanation (Why)
+
+* A horizontal bar chart is generated dynamically
+
+* Shows top features influencing the prediction
+
+* **Red bars:** Push toward churn
+
+* **Green bars:** Push toward staying
+
+This helps users understand **why the model made a specific decision**, making the system transparent and trustworthy.
+
+---
+
+## 💡 Summary
+
+This application provides:
+
+* Real-time churn prediction
+* Clear visual explanation of results
+* Interactive and user-friendly interface
+
+It demonstrates both **machine learning capability** and **practical business insight**.
